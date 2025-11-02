@@ -48,4 +48,5 @@ def submit():
     return f"✅ Thank you, {name}! Your responses have been saved."
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get("PORT", 5000))  # Use Render's PORT, default 5000 locally
+    app.run(host="0.0.0.0", port=port)
