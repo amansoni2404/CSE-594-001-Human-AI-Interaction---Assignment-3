@@ -1,0 +1,11 @@
+text,model_output,ground_truth
+"Oh great, another Monday morning meeting!",Sarcastic,Sarcastic
+"I absolutely love getting stuck in traffic for hours.",Sarcastic,Sarcastic
+"The weather is so amazing today," said while it’s raining heavily.,Sarcastic,Sarcastic
+"I got promoted! Hard work really pays off.",Not Sarcastic,Not Sarcastic
+"I failed my exam again, what a pleasant surprise.",Sarcastic,Sarcastic
+"She really helped me finish my project on time.",Not Sarcastic,Not Sarcastic
+"Wow, I just love when my phone dies right before an important call.",Sarcastic,Sarcastic
+"This new movie is actually really good!",Not Sarcastic,Not Sarcastic
+"I can’t believe how lucky I am to spill coffee on myself again.",Sarcastic,Sarcastic
+"Thanks for reminding me of my mistakes, that’s so helpful.",Sarcastic,Sarcastic
