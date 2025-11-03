@@ -64,6 +64,10 @@
         {% for item in data %}
         <div class="question">
             <p><b>{{ loop.index }}. {{ item.text }}</b></p>
+            <!-- Hidden input to include the actual text -->
+            <input type="hidden" name="headline_{{ loop.index0 }}" value="{{ item.text }}">
+            <input type="hidden" name="model_output_{{ loop.index0 }}" value="{{ item.model_output }}">
+            <input type="hidden" name="ground_truth_{{ loop.index0 }}" value="{{ item.ground_truth }}">
             <p class="model-output">AI Prediction: <b>{{ item.model_output }}</b></p>
             <label><input type="radio" name="response_{{ loop.index0 }}" value="Sarcastic" required> Sarcastic</label>
             <label><input type="radio" name="response_{{ loop.index0 }}" value="Not Sarcastic"> Not Sarcastic</label>

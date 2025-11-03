@@ -51,7 +51,7 @@
 <body>
     <h1>Human-Only Sarcasm Detection Task</h1>
     <h2>CSE 594-001: Human AI Interaction A3-1</h2>
-    <h3>Please read the following news headlines and classify them as Sarcastic or Non-Sarcastic! </h>
+    <h3>Please read the following news headlines and classify them as Sarcastic or Non-Sarcastic!</h3>
     <form action="/submit" method="post">
         <label><b>Enter your name:</b></label><br>
         <input type="text" name="participant_name" required><br><br>
@@ -59,6 +59,9 @@
         {% for item in data %}
         <div class="question">
             <p><b>{{ loop.index }}. {{ item.text }}</b></p>
+            <!-- Hidden input to include the actual text -->
+            <input type="hidden" name="headline_{{ loop.index0 }}" value="{{ item.text }}">
+            <input type="hidden" name="ground_truth_{{ loop.index0 }}" value="{{ item.ground_truth }}">
             <label><input type="radio" name="response_{{ loop.index0 }}" value="Sarcastic" required> Sarcastic</label>
             <label><input type="radio" name="response_{{ loop.index0 }}" value="Not Sarcastic"> Not Sarcastic</label>
         </div>
