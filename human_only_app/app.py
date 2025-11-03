@@ -17,8 +17,8 @@ DATASET_PATH = "dataset.csv"
 df = pd.read_csv(DATASET_PATH)
 data = df.to_dict(orient='records')
 
-cred_path = json.loads(os.environ.get("GOOGLE_APPLICATION_CREDENTIALS", "serviceAccountKey.json"))
-cred = credentials.Certificate(cred_path)
+cred_dict  = json.loads(os.environ.get("GOOGLE_APPLICATION_CREDENTIALS", "serviceAccountKey.json"))
+cred = credentials.Certificate(cred_dict)
 firebase_admin.initialize_app(cred)
 db = firestore.client()
 
